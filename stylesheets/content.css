@@ -1,0 +1,428 @@
+*{
+    box-sizing: border-box;
+}
+html, body{
+    width: 100%;
+    overflow-x: hidden;
+    height: 100%;
+    background-color: rgb(17, 17, 17);
+}
+
+@font-face {
+  font-family: "Wremena";
+  src: url("../fonts/Wremena.otf") format("truetype");
+  font-style: Light;
+  font-weight: Light;
+}
+
+p{
+    font-family: 'Wremena';
+    font-size: 1.3vw;
+    color: rgb(255, 255, 255);
+}
+
+.letters {
+    margin-top: 1vw;
+    display: flex;
+    height: 50vw;
+    width: 47vw;
+    margin-left: 23%;
+    background-image: url("../img/letters.png");
+    background-size: 194vw 48vw;
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    transition: background-position 0.3s steps(3);
+}
+
+.letters:hover {
+    background-position: -145vw 0;
+}
+
+.letters:not(:hover) {
+    transition: background-position 0.3s steps(3);
+}
+
+.letters:not(:hover):hover {
+    background-position: 0 0;
+}
+
+
+.next_button {
+    margin-top: -12vw;
+    margin-left: 80vw;
+    display: absolute;
+    width: 9vw;
+    cursor: pointer;
+}
+
+.next_button img{
+    width: 100%;
+    height: 100%;
+}
+
+.information_box {
+    padding: 3vw;
+    padding-top: 4vw;
+    width: 98%;
+    margin-top: 10px;
+    margin-left: 10px;
+    display: none;
+    justify-content: space-between;
+    position: fixed;
+    z-index: 20;
+}
+
+.name {
+    width: 10vw;
+}
+
+.name p{
+    font-size: 2vw;
+}
+
+
+.inf {
+    width: 40vw;
+}
+
+.namep {
+    text-align: left;
+    cursor: pointer;
+}
+
+/* .dot {
+    font-size: 1.5vw;
+} */
+
+.bookcase {
+    display: none;
+    width: 100%;
+    padding: 0;
+}
+
+.bookcase {
+    width: 100%;
+    padding: 0;
+}
+
+.horizontal img, .horizontal5 img{
+    width: 100%;
+    height: 100%;
+}
+
+.horizontal, .horizontal5 {
+    position: relative;
+    margin: 0;
+    width: 100%;
+    height: 10%;
+}
+
+.shelf, .shelf2, .shelf3, .shelf4, .shelf5, .shelf6, .shelf7{
+    margin: 0;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+}
+
+
+.vertical {
+    width: 3%;
+    display: flex;
+}
+
+.vertical img{
+    width: 100%;
+}
+
+
+.mug {
+    display: flex;
+    width: 25vw;
+    z-index: 1;
+    margin-left: -40vw;
+}
+
+.mug img{
+    width: 100%;
+}
+
+.brush{
+    position: relative;
+    margin-bottom: 5%;
+    width: 3vw;
+    rotate: -15deg;
+    display: flex;
+}
+
+.brush img{
+    width: 100%;
+}
+
+.knife{
+    position: relative;
+    margin-bottom: 5%;
+    margin-left: -15vw;
+    width: 6vw;
+    rotate: 20deg;
+    display: flex;
+}
+
+.knife img{
+    width: 100%;
+}
+
+.books {
+    width: 35vw;
+    display: flex;
+    align-items: end;
+    cursor: pointer;
+}
+
+.book2, .book3, .book5 {
+    width: 6vw;
+    display: flex;
+}
+
+.book1{
+    width: 5vw;
+    display: flex;
+}
+
+.book1 img{
+    width: 5vw;
+}
+
+.book4 {
+    width: 2.5vw;
+}
+
+
+.book2 img, .book3 img, .book5 img{
+    width: 6vw;
+}
+
+.box1, .box2 {
+    width: 30vw;
+    display: flex;
+    z-index: 3;
+}
+.box1 img, .box2 img {
+    width: 30vw;
+    display: flex;
+}
+
+.paper1, .paper2, .paper3 {
+    display: flex;
+    position: absolute;
+    width: 20vw;
+    cursor: pointer;
+}
+
+.paper1 img, .paper2 img, .paper3 img {
+    width: 100%;
+}
+
+.olimpus_old, .canon, .olimpus_new {
+    width: 27vw;
+    display: flex;
+    cursor: pointer;
+}
+
+.olimpus_old img, .canon img, .olimpus_new img{
+    width: 27vw;
+}
+
+.flash {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    opacity: 0;
+    pointer-events: none;
+    transition: opasity 1s;
+    z-index: 21;
+}
+
+.magnet_base {
+    position: relative;
+    width: 67vw;
+
+    display: flex;
+}
+
+
+.magnet_base img{
+    width: 67vw;
+}
+
+.magnet_1, .magnet_2, .magnet_3, .magnet_4 {
+    width: 15vw;
+    height: 10vw;
+    display: flex;
+    position: absolute;
+    cursor: move;
+}
+
+.magnet_1 {
+    left: 61vw;
+    bottom: 20vw;
+    rotate: 20deg;
+    z-index: 1;
+}
+
+.magnet_2 {
+    left: 50vw;
+    bottom: 5vw;
+    rotate: -2deg;
+    z-index: 2;
+}
+
+.magnet_3 {
+    left: 27vw;
+    bottom: 22vw;
+    rotate: 10deg;
+    z-index: 3;
+}
+
+.magnet_4 {
+    left: 22vw;
+    bottom: 7vw ;
+    rotate: -10deg;
+    z-index: 4;
+}
+
+.magnet_1 img, .magnet_2 img, .magnet_3 img, .magnet_4 img {
+    width: 15vw;
+}
+
+.vvod_field {
+    border-color: rgb(255, 255, 255);
+    border-radius: 30%;
+    text-align: center;
+    width: 6vw;
+    height: 8vh;
+    display: flex;
+    color: rgb(149, 149, 149);
+    background-color: rgb(17, 17, 17);
+    font-family: 'Wremena';
+    font-size: 1.3vw;
+    margin-top: 20vh;
+    
+}
+
+
+.vvod_field:focus::placeholder {
+    color: white; 
+    opacity: 100%;
+}
+
+.container {
+    margin-left: 10vw;
+}
+
+.container img{
+    width: 3vw;
+    height: 20vh;
+}
+
+.instrucktion {
+    display: flex;
+    width: 14vw;
+    margin-bottom: 10vw;
+    align-items: flex-start;
+}
+
+.instrucktion img{
+    height: 100%;
+    width: 100%;
+}
+
+.input {
+    align-items: end;
+    margin-left: 2vw;
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+
+.lino {
+    display: flex;
+    margin-left: 2vw;
+    width: 25vw;
+    position: relative;
+    cursor: none;
+}
+
+.lino img{
+    height: 100%;
+    width: 100%;
+}
+
+.line {
+    position: absolute;
+    pointer-events: none; 
+}
+
+.line img{
+    width: 1.5vw; 
+    height: 1.5vh;
+}
+
+
+.custom-cursor {
+    display: none; 
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 2vw; 
+    height: 25vh;
+    rotate: -150deg;
+    background-image: url('../img/stick.png'); 
+    background-size: cover;
+    pointer-events: none; 
+    z-index: 1;
+}
+
+.trail {
+    display: none; 
+    position: absolute;
+    pointer-events: none;
+}
+
+.clock {
+    width: 27vw;
+    height: auto;
+    display: flex;
+}
+
+.clock img {
+    width: 27vw;
+    height: 100%;
+}
+
+.glass {
+    width: 18vw;
+    height: auto;
+    display: flex;
+}
+
+.glass img{
+    width: 18vw;
+    height: 100%;
+}
+
+.tea_pack {
+    width: 26vw;
+    height: auto;
+    display: flex;
+}
+
+.tea_pack img{
+    width: 26vw;
+    height: 100%;
+}
