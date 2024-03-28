@@ -21,4 +21,18 @@
     .horizontal5 {
         display: none;
     }
+    .letters {
+        width: 94vw;
+        height: 100vw;
+        background-size: 376vw 94vw;
+        margin-left: 10%;
+    }
+    .letters:hover {
+        background-position: -290vw 0;
+    }
+    .next_button {
+        margin-top: 5vw;
+        margin-left: 43vw;
+        width: 15vw;
+    }
 }
